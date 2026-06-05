@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario Web 💖</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color:#333;
+            line-height:1.7;
+        }
+
+        header{
+            background: linear-gradient(135deg,#1651ff,#4f87ff);
+            color:white;
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        header h1{
+            font-size:2.5rem;
+        }
+
+        header p{
+            margin-top:10px;
+            opacity:.9;
+        }
+
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:40px auto;
+        }
+
+        .card{
+            background:white;
+            border-radius:16px;
+            padding:25px;
+            margin-bottom:25px;
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+        }
+
+        .card h2{
+            color:#4f7eff;
+            margin-bottom:15px;
+        }
+
+        .definition{
+            background:#fff4f8;
+            border-left:5px solid #4f7eff;
+            padding:15px;
+            border-radius:8px;
+            margin:15px 0;
+        }
+
+        pre{
+            background:#1e1e1e;
+            color:#f8f8f2;
+            padding:15px;
+            border-radius:10px;
+            overflow-x:auto;
+            margin:15px 0;
+        }
+
+        .visual{
+            background:#eef2ff;
+            border-radius:10px;
+            padding:20px;
+            margin-top:15px;
+        }
+
+        .tree{
+            font-family: monospace;
+            white-space: pre-line;
+        }
+
+        .title-demo{
+            font-size:2rem;
+            margin-bottom:10px;
+        }
+
+        .subtitle-demo{
+            font-size:1.3rem;
+            color:#666;
+        }
+
+        .link-demo{
+            color:#2563eb;
+            text-decoration:underline;
+            cursor:pointer;
+        }
+
+        .list-demo ul{
+            padding-left:20px;
+        }
+
+        .box-model{
+            border:3px solid #ef4444;
+            padding:20px;
+            background:#fde68a;
+            margin:20px;
+            text-align:center;
+        }
+
+        .flex-demo{
+            display:flex;
+            gap:10px;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+
+        .flex-item{
+            width:70px;
+            height:70px;
+            background:#ff4f81;
+            color:white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:10px;
+            font-weight:bold;
+        }
+
+        .class-demo{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+
+        .class-box{
+            background:#dbeafe;
+            padding:10px 15px;
+            border-radius:8px;
+        }
+
+        .id-demo{
+            background:#fee2e2;
+            border:2px solid #ef4444;
+            padding:15px;
+            border-radius:10px;
+            display:inline-block;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> Glosario Web 💖</h1>
+    <p>Espero que te sirva, te amo!</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>¿Qué es HTML?</h2>
+
+        <div class="definition">
+            HTML es el lenguaje que crea la estructura de una página web.
+        </div>
+
+        <pre>&lt;h1&gt;Hola Daniela&lt;/h1&gt;
+        &lt;p&gt;Estoy aprendiendo HTML&lt;/p&gt;</pre>
+
+                <div class="visual">
+                    <h1>Hola Daniela</h1>
+                    <p>Estoy aprendiendo HTML</p>
+                </div>
+            </div>
+
+            <div class="card">
+            <h2>¿Qué es DOCTYPE?</h2>
+
+            <div class="definition">
+                Le dice al navegador que el documento está escrito usando HTML5.
+            </div>
+
+        <pre>&lt;!DOCTYPE html&gt;</pre>
+
+            <div class="visual">
+                📄 Documento HTML5
+            </div>
+        </div>
+
+    <div class="card">
+        <h2>¿Qué es CSS?</h2>
+
+        <div class="definition">
+            CSS sirve para cambiar la apariencia de los elementos HTML.
+        </div>
+
+<pre>h1{
+   color: hotpink;
+}</pre>
+
+        <div class="visual">
+            <h1 style="color:hotpink;"> Hola Daniela</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es una etiqueta?</h2>
+
+        <div class="definition">
+            Una etiqueta le dice al navegador qué tipo de contenido mostrar.
+        </div>
+
+<pre>&lt;p&gt;Esto es un párrafo&lt;/p&gt;</pre>
+
+        <div class="visual">
+            🏷️ &lt;p&gt; → Párrafo
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es un elemento?</h2>
+
+        <div class="definition">
+            Un elemento está formado por la etiqueta de apertura, el contenido y la etiqueta de cierre.
+        </div>
+
+<pre>&lt;p&gt;Hola&lt;/p&gt;</pre>
+
+        <div class="visual tree">
+Elemento
+│
+├─ Etiqueta de apertura &lt;p&gt;
+├─ Contenido "Hola"
+└─ Etiqueta de cierre &lt;/p&gt;
+        </div>
+    </div>
+
+    <div class="card">
+    <h2>¿Qué es un &lt;div&gt;?</h2>
+
+    <div class="definition">
+        Es un contenedor que sirve para agrupar elementos.
+    </div>
+
+<pre>
+&lt;div&gt;
+   Contenido
+&lt;/div&gt;
+</pre>
+
+    <div class="visual">
+        <div style="border:2px dashed #ff4f81;padding:20px;border-radius:10px;">
+            📦 Contenedor DIV
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>¿Qué es la propiedad color?</h2>
+
+    <div class="definition">
+        Cambia el color del texto.
+    </div>
+
+<pre>
+color: red;
+</pre>
+
+    <div class="visual">
+        <h3 style="color:red;">
+            Este texto es rojo
+        </h3>
+    </div>
+</div>
+
+    <div class="card">
+        <h2>¿Qué es un atributo?</h2>
+
+        <div class="definition">
+            Es información adicional para una etiqueta.
+        </div>
+
+<pre>&lt;img src="gatito.jpg"&gt;</pre>
+
+        <div class="visual tree">
+Etiqueta: img
+Atributo: src
+Valor: gatito.jpg
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es el &lt;head&gt;?</h2>
+
+        <div class="definition">
+            Guarda información para el navegador.
+        </div>
+
+        <div class="visual tree">
+📄 Página Web
+│
+├── HEAD
+│   ├── title
+│   ├── charset
+│   └── viewport
+│
+└── BODY
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es el &lt;body&gt;?</h2>
+
+        <div class="definition">
+            Contiene todo lo que ve el usuario.
+        </div>
+
+<pre>&lt;body&gt;
+   &lt;h1&gt;Hola&lt;/h1&gt;
+&lt;/body&gt;</pre>
+
+        <div class="visual">
+            👀 Todo lo visible en la página.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es &lt;title&gt;?</h2>
+
+        <div class="definition">
+            Define el nombre que aparece en la pestaña del navegador.
+        </div>
+
+        <div class="visual">
+            🌐 Mi Primera Página
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es charset?</h2>
+
+        <div class="definition">
+            Permite mostrar correctamente caracteres especiales.
+        </div>
+
+        <div class="visual">
+            ❌ MÃ©xico
+            <br><br>
+            ✅ México
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es viewport?</h2>
+
+        <div class="definition">
+            Ayuda a que la página se adapte a celulares y tablets.
+        </div>
+
+        <div class="visual">
+            🖥️ Computadora
+            <br><br>
+            ⬇️
+            <br><br>
+            📱 Celular
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es un encabezado?</h2>
+
+        <div class="definition">
+            Son títulos que organizan el contenido.
+        </div>
+
+<pre>&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;</pre>
+
+        <div class="visual">
+            <div class="title-demo">Título Principal</div>
+            <div class="subtitle-demo">Subtítulo</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es un párrafo?</h2>
+
+        <div class="definition">
+            Sirve para escribir texto.
+        </div>
+
+<pre>&lt;p&gt;Hola Daniela&lt;/p&gt;</pre>
+
+        <div class="visual">
+            Hola Daniela
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es un enlace?</h2>
+
+        <div class="definition">
+            Permite navegar hacia otra página.
+        </div>
+
+<pre>&lt;a href=""&gt;Haz clic&lt;/a&gt;</pre>
+
+        <div class="visual">
+            <span class="link-demo">🔗 Haz clic</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es una imagen?</h2>
+
+        <div class="definition">
+            Permite mostrar imágenes dentro de una página web.
+        </div>
+
+<pre>&lt;img src="foto.jpg"&gt;</pre>
+
+        <div class="visual">
+            🖼️ Imagen
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es una lista?</h2>
+
+        <div class="definition">
+            Agrupa varios elementos relacionados.
+        </div>
+
+<pre>&lt;ul&gt;
+   &lt;li&gt;HTML&lt;/li&gt;
+   &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+        <div class="visual list-demo">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+    <h2>¿Qué es una lista ordenada?</h2>
+
+    <div class="definition">
+        Es una lista que muestra los elementos numerados.
+    </div>
+
+<pre>
+&lt;ol&gt;
+   &lt;li&gt;HTML&lt;/li&gt;
+   &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+    <div class="visual">
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>¿Qué es font-size?</h2>
+
+    <div class="definition">
+        Cambia el tamaño del texto.
+    </div>
+
+<pre>
+font-size: 30px;
+</pre>
+
+    <div class="visual">
+        <p style="font-size:30px;">
+            Texto grande
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>¿Qué es font-family?</h2>
+
+    <div class="definition">
+        Cambia el tipo de letra.
+    </div>
+
+<pre>
+font-family: Arial;
+</pre>
+
+    <div class="visual">
+        <p style="font-family:Georgia;">
+            Texto con otra fuente
+        </p>
+    </div>
+</div>
+
+    <div class="card">
+        <h2>¿Qué es una clase?</h2>
+
+        <div class="definition">
+            Permite aplicar estilos a varios elementos al mismo tiempo.
+        </div>
+
+<pre>&lt;p class="rojo"&gt;</pre>
+
+        <div class="visual class-demo">
+            <div class="class-box">Elemento 1</div>
+            <div class="class-box">Elemento 2</div>
+            <div class="class-box">Elemento 3</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es un ID?</h2>
+
+        <div class="definition">
+            Identifica un único elemento dentro de la página.
+        </div>
+
+<pre>&lt;div id="menu"&gt;</pre>
+
+        <div class="visual">
+            <div class="id-demo">
+                🎯 Elemento único
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es un selector CSS?</h2>
+
+        <div class="definition">
+            Indica qué elemento recibirá estilos.
+        </div>
+
+<pre>h1{
+   color:red;
+}</pre>
+
+        <div class="visual">
+            🎯 Selector → h1
+            <br><br>
+            ⬇️
+            <br><br>
+            🎨 Aplica estilo
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es Margin?</h2>
+
+        <div class="definition">
+            Es el espacio exterior que rodea un elemento.
+        </div>
+
+        <div class="visual">
+            <div style="padding:20px;background:#dbeafe;">
+                MARGIN
+                <div style="background:white;padding:20px;margin:20px;">
+                    CAJA
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es Padding?</h2>
+
+        <div class="definition">
+            Es el espacio interior entre el contenido y el borde.
+        </div>
+
+        <div class="visual">
+            <div style="border:3px solid #333;padding:30px;">
+                CONTENIDO
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué es Border?</h2>
+
+        <div class="definition">
+            Es el borde que rodea un elemento.
+        </div>
+
+        <div class="visual">
+            <div style="border:5px solid #ff4f81;padding:20px;">
+                CONTENIDO
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Modelo de Caja (Box Model)</h2>
+
+        <div class="definition">
+            Todo elemento HTML se comporta como una caja formada por margin, border, padding y contenido.
+        </div>
+
+        <div class="visual">
+            <div class="box-model">
+                BORDER
+                <div style="background:white;padding:20px;">
+                    CONTENT
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+    <h2>¿Qué es un button?</h2>
+
+    <div class="definition">
+        Crea un botón que puede ejecutar una acción.
+    </div>
+
+<pre>
+&lt;button&gt;Enviar&lt;/button&gt;
+</pre>
+
+    <div class="visual">
+        <button style="padding:10px 20px;">
+            Enviar
+        </button>
+    </div>
+</div>
+
+    <div class="card">
+        <h2>¿Qué es Flexbox?</h2>
+
+        <div class="definition">
+            Permite acomodar elementos fácilmente en filas o columnas.
+        </div>
+
+<pre>display: flex;</pre>
+
+        <div class="visual">
+            <div class="flex-demo">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card">
+    <h2>¿Qué es un formulario?</h2>
+
+    <div class="definition">
+        Permite que el usuario escriba o envíe información.
+    </div>
+
+<pre>
+&lt;form&gt;
+&lt;/form&gt;
+</pre>
+
+    <div class="visual">
+        Nombre:
+        <br><br>
+        <input type="text" placeholder="Escribe tu nombre">
+    </div>
+</div>
+
+<div class="card">
+    <h2>¿Qué es un input?</h2>
+
+    <div class="definition">
+        Es una caja donde el usuario puede escribir información.
+    </div>
+
+<pre>
+&lt;input type="text"&gt;
+</pre>
+
+    <div class="visual">
+        <input type="text" placeholder="Escribe aquí">
+    </div>
+</div>
+
+<div class="card">
+    <h2>¿Qué es un label?</h2>
+
+    <div class="definition">
+        Es una etiqueta que describe un campo de formulario.
+    </div>
+
+<pre>
+&lt;label&gt;Nombre&lt;/label&gt;
+</pre>
+
+    <div class="visual">
+        <label>Nombre:</label>
+        <br>
+        <input type="text">
+    </div>
+</div>
+
+<footer>
+    💖 Hecho para mi novia preciosa • Introducción visual a HTML y CSS
+</footer>
+
+</body>
+</html>
